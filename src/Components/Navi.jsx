@@ -10,9 +10,9 @@ function Navi() {
    
         return (
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="/react_info/"><img src={Logo} alt="Logo u-php" /></Navbar.Brand>
+                <Navbar.Brand href="/"><img src={Logo} alt="Logo u-php" /></Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="/react_info/">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
                     {data.map(function (item, idx) {
                         return <Nav.Link key={idx} href={item.path}>{item.display}</Nav.Link>
                     })}

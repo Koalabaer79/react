@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router basename='/react_info/'>
+        <Router>
           <Navi></Navi>
           <Switch>
             {data.map((item, idx) => {

@@ -4,13 +4,13 @@ import Info from './Info';
 const pages = [
     {
         component: About,
-        path: "react_info/About",
+        path: "/About",
         locaction: "/About",
         display: "About"
     },
     {
         component: Info,
-        path: "react_info/Info",
+        path: "/Info",
         locaction: "/Info",
         display: "Info"
     }
