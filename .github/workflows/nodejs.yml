@@ -19,16 +19,18 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run build --if-present
-    - name: git-ftp-action
-      uses: sebastianpopp/git-ftp-action@2.1.0
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
-        # URL
-        url: ftp://ftp.u-php.de
-        # FTP login name
-        user: lars
-        # FTP password
-        password: 3105Madeira12
-        # Specifies a local directory to sync from as if it were the git project root path.
-        syncroot: # optional, default is .
+        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+        ftp-server: ${{ secrets.ftp_path }}
+        # FTP account username
+        ftp-username: ${{ secrets.ftp_user }}
+        # FTP account password
+        ftp-password: ${{ secrets.SuperSecret }}
+        # The local folder to copy, defaults to root project folder
+        local-dir: react.u-php.de
+        # Passes through options into git-ftp
+        git-ftp-args: # optional
       env:
         CI: true
