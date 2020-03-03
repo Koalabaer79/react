@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node CI
 
 on: [push]
 
@@ -9,28 +9,27 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build --if-present
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+    - name: Install npm dependencies
+      run: npm install
+    
+    - name: Build
+      run: npm run build
+    - name: Upload ./dist
+      uses: sebastianpopp/ftp-action@releases/v1
       with:
-        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ${{ secrets.ftp_path }}
-        # FTP account username
-        ftp-username: ${{ secrets.ftp_user }}
-        # FTP account password
-        ftp-password: ${{ secrets.SuperSecret }}
-        # The local folder to copy, defaults to root project folder
-        local-dir: react.u-php.de
-        # Passes through options into git-ftp
-        git-ftp-args: # optional
+        name: 'Build'
+        localDir: './build'
+        host: ${{ secrets.ftp_path }}
+        user: ${{ secrets.ftp_user }}
+        password: ${{ secrets.ftp_pass }}
+        remoteDir: "react.u-php.de"
       env:
         CI: true
