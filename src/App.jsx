@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
-
+import Index from './Components/Home';
 import Navi from './Components/Navi';
 import data from './Components/Pages';
 
@@ -11,13 +10,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
+        <Router basename='/react_info/'>
           <Navi></Navi>
           <Switch>
-            {data.map(function (item, idx) {
-              console.log(item.component);
-              return <Route key={idx} path={item.path} component={item.component} />
+            {data.map((item, idx) => {
+              // console.log(item.component);
+              return <Route path={item.location} component={item.component} key={idx} />
             })}
+            <Route path="/" component={Index} />
           </Switch>
         </Router>
       </div>

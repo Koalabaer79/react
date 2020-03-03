@@ -1,22 +1,18 @@
-import Home from './Home';
 import About from './About';
 import Info from './Info';
 
 const pages = [
     {
-        "component": Home,
-        "path": "/",
-        "display": "Home"
+        component: About,
+        path: "react_info/About",
+        locaction: "/About",
+        display: "About"
     },
     {
-        "component": About,
-        "path": "/About",
-        "display": "About"
-    },
-    {
-        "component": Info,
-        "path": "/Info",
-        "display": "Info"
+        component: Info,
+        path: "react_info/Info",
+        locaction: "/Info",
+        display: "Info"
     }
 ]
 
