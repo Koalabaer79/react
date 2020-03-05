@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './scss/main.scss';
 import Index from './Components/Home';
 import Navi from './Components/Navi';
 import data from './Components/Pages';
