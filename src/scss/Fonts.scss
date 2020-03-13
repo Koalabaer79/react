@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'quicksand_reg';
+    src: url('./fonts/Quicksand-Regular.woff2') format('woff2'),
+        url('./fonts/Quicksand-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quicksand_bold';
+    src: url('./fonts/Quicksand-Bold.woff2') format('woff2'),
+        url('./fonts/Quicksand-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

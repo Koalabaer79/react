@@ -1,0 +1,22 @@
+{
+    "react":  {
+        "title": "React Website mit SEO - Auffindbarkeit in den Suchmaschinen",
+        "description": "Dieses Projekt steht für eine React Website mit SEO. Es gilt heraus zu finden, wie gut die Auffindbarkeit in Suchmaschinen ist und wie sie sich allgemein im Internet Verhält. Um das zu realisieren, benötigt es diverse Änderungen an einer standardmäßigen React-Seite."
+    },
+    "entwicklung":  {
+        "title": "Entwicklung einer SEO gerechten Website in React",
+        "description": "Allgemeine Einführung zur Entwicklung einer SEO gerechten Website in React. Programmieren Sie eine Webseite in React, die für die Suchmaschinen optimiert ist."
+    },
+    "arbeiten":  {
+        "title": "Arbeiten mit React",
+        "description": "Was ist wichtig wenn man mit React arbeitet. Auf was sollte man bei Arbeiten mit React achten, welche Besonderheiten gibt es zu beachten!"
+    },
+    "components":  {
+        "title": "React Components in Github zum Download",
+        "description": "Hier werden React Components zum Download angeboten. Über Github nützliche Komponenten für React downloaden."
+    },
+    "tools":  {
+        "title": "Tools für React Webseiten",
+        "description": "Holen Sie sich coole Tools die Erstellung Ihrer eigenen React-Website und heben Sie sich von anderen Webseiten ab!"
+    }
+}

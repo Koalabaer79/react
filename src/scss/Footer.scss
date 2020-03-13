@@ -1,0 +1,26 @@
+@import './Variables.scss';
+
+.footer {
+    width: 100%;
+    background-color: $dark;
+    padding: 20px;
+    color: $light;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & .foot_int {
+        width: 30%;
+    }
+
+    & p {
+        font-family: 'quicksand_reg';
+        font-size: 20px;
+        
+        & a {
+            color: $light;
+            font-family: 'quicksand_bold';
+        }
+    }
+}

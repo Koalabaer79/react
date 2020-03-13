@@ -1,33 +1,183 @@
-.nav_el {
+@import './Variables.scss';
+
+// Width of Wrapper and final width of container
+$start-width: 53px;
+$end_width_0: 112px;
+$end_width_1: 210px;
+$end_width_2: 155px;
+$end_width_3: 215px;
+$end_width_4: 114px;
+$end_width_5: 125px;
+
+#c_0, #c_1, #c_2, #c_3, #c_4, #c_5 { transition: width 1s; }
+
+#c_0:hover { width: $end_width_0; }
+#c_1:hover { width: $end_width_1; }
+#c_2:hover { width: $end_width_2; }
+#c_3:hover { width: $end_width_3; }
+#c_4:hover { width: $end_width_4; }
+#c_5:hover { width: $end_width_5; }
+
+#w_0 { width: $end_width_0; }
+#w_1 { width: $end_width_1; }
+#w_2 { width: $end_width_2; }
+#w_3 { width: $end_width_3; }
+#w_4 { width: $end_width_4; }
+#w_5 { width: $end_width_5; }
+
+body {
+    background-color: $light;
+    margin: 0; }
+
+a { text-decoration: none; }
+
+.wrapper {
     list-style: none;
-    float: left;
+    margin: 0;
     padding: 0;
-  
-    a {
-        text-decoration: none;
-        padding: 22px 20px;
-        color: #fff;
-        display: block;
-        cursor: pointer;
-        &:hover {
-            color: #B6B6B6;
-        }
-        &.active{
-            color: #B6B6B6;
-        };
+    width: 100%;
+    // background-color: $dark;
+    @media screen and (max-width: $max_Width) {
+        display: none;
     }
 }
 
-.nav {
-    width: 100%;
+#nav {
+    max-width: $nav_Width;
     height: 70px;
-    background: #363636;
-    padding: 0;
-    margin: 0;
+    background-color: $dark;
+    margin: 0 auto;
+    display: relative;
+    padding: 5px;
+
+    @media screen and (max-width: $max_Width) {
+        height: auto;
+    }
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
+.responsive {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 0 0 5px 5px;
+    background-color: $dark;
+}
+
+.container {
+    border: 5px solid $light;
+    width: $start-width;
+    overflow: hidden;
+    margin: 5px;
+    transition: background-color 1s;
+    float: left;
+
+    @media screen and (max-width: $max_Width) {
+        float: none;
+    }
+            
+    &:hover{ background-color: $light; }
+
+    &:hover > a > .logo-wrap { color: $dark; }
+
+    &:hover .logo-wrap > .el_1, &:hover .logo-wrap > .el_2, &:hover .logo-wrap > .el_3, &:hover .logo-wrap > .el_4, &:hover .logo-wrap > .el_5, &:hover .logo-wrap > .el_6, &:hover .logo-wrap > .el_7, &:hover .logo-wrap > .el_8, &:hover .logo-wrap > .el_9, &:hover .logo-wrap > .el_10{
+        opacity: 1;
+        transition: opacity 1s;
+    }
+
+    &:hover .logo-wrap > .el_1 { transition-delay: .1s; }
+    &:hover .logo-wrap > .el_2 { transition-delay: .2s; }
+    &:hover .logo-wrap > .el_3 { transition-delay: .3s; }
+    &:hover .logo-wrap > .el_4 { transition-delay: .4s; }
+    &:hover .logo-wrap > .el_5 { transition-delay: .5s; }
+    &:hover .logo-wrap > .el_6 { transition-delay: .6s; }
+    &:hover .logo-wrap > .el_7 { transition-delay: .7s; }
+    &:hover .logo-wrap > .el_8 { transition-delay: .8s; }
+    &:hover .logo-wrap > .el_9 { transition-delay: .9s; }
+    &:hover .logo-wrap > .el_10 { transition-delay: 1s; }
+
+    & .logo-wrap{
+        padding: 8px 0;
+        color: $light;
+        transition: color 1s;
+        text-align: center;
+        display: block;
+
+        & .letter {
+            font-family: arial;
+            font-size: 30px;
+            font-weight: bold;
+            display: inline;
+        }
+    }
+}
+       
+.el_1, .el_2, .el_3, .el_4, .el_5, .el_6, .el_7, .el_8, .el_9, .el_10 {
+    opacity: 0;
+    transition: opacity .1s;
+    color: $secondary;
+}
+
+.el_2, .el_3, .el_4, .el_5, .el_6, .el_7, .el_8, .el_9, .el_10 { transition-delay: 0s; }
+
+#btn {
+    border: 5px solid $light;
+    width: $start-width - 20px;
+    height: $start-width - 23px;
     padding: 10px;
+    margin: 5px;
+    fill: $light;
+    transition: background-color 1s,fill 1s;
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+        fill: $dark;
+        background-color: $light;
+    }
+
+    @media screen and (max-width: $max_Width) {
+        display: block;
+    }
+}
+
+.active { background-color: $light; }
+.active > a > .logo-wrap { color: $dark; }
+.last {
+    float: right;
+    @media screen and (max-width: $max_Width) {
+        float: none;
+    }
+}
+
+@media screen and (max-width: $max_Width) {
+    #c_0, #c_1, #c_2, #c_3, #c_4, #c_5 {
+        transition: none;
+        width: 90%;
+        padding-left: 10px;
+        background-color: $light;
+    }
+    #w_0, #w_1, #w_2, #w_3, #w_4, #w_5 {
+        width: 100%;
+        text-align: left;
+    }
+    #c_0:hover, #c_1:hover, #c_2:hover, #c_3:hover, #c_4:hover, #c_5:hover {
+        width: 90%;
+    }
+    .el_1, .el_2, .el_3, .el_4, .el_5, .el_6, .el_7, .el_8, .el_9, .el_10 {
+        transition: none;
+        opacity: 1;
+    }
+    .logo-wrap {
+        transition: none;
+        background-color: $light;
+        color: $dark;
+    }
+
+    .container {
+        .logo-wrap{
+            color: $dark;
+            transition: none;
+        } 
+    }
 }

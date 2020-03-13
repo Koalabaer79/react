@@ -1,0 +1,167 @@
+@import './Fonts.scss';
+@import './Variables.scss';
+
+body {
+    font-family: 'quicksand_reg';
+    color: $dark;
+    background-color: $light;
+}
+
+b {
+    font-family: 'quicksand_bold';
+}
+
+hr {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    background-image: linear-gradient(to right, $light, $dark, $dark, $light);
+    height: 2px;
+    border: none;
+}
+
+h1 {
+    font-family: 'quicksand_bold';
+    font-size: 35px;
+    text-align: center;
+    width: calc(100% - 20px);
+    margin: 20px auto;
+
+    @media screen and (max-width: $max_Width) {
+        font-size: 30px;
+        width: 90%;
+    }
+}
+
+h2 {
+    font-family: 'quicksand_bold';
+    font-size: 25px;
+    text-align: center;
+    width: calc(100% - 40px);
+    padding: 20px 10px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $max_Width) {
+        width: 90%;
+    }
+}
+
+.imgCont {
+    max-width: $page_Width;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: $dark;
+    text-align: center;
+}
+
+.mainPic {
+    max-width: 800px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mainCont {
+    width: 100%;
+    max-width: $page_Width;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 20px ;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    color: lighten($color: $dark, $amount: 30);
+
+    @media screen and (max-width: $max_Width) {
+        width: 90%;
+    }
+}
+
+ul {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.ul_green, .ul_red {
+    margin-bottom: 20px;
+    & li {
+        margin-bottom: 10px;
+        font-family: 'quicksand_reg';
+        font-size: 18px;
+    }
+    & li::before {
+        content: "\25AA";
+        display: inline-block;
+        width: 20px;
+        margin-left: -20px;
+    }
+}
+
+.ul_green {
+    & li::before {
+        color: green;
+    }
+}
+.ul_red {
+    & li::before {
+        color: red;
+    }
+}
+
+.darkCont {
+    width: 100%;
+    color: $light;
+    background-color: $dark;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.darkIns {
+    width: 50%;
+
+    & p {
+        color: $light;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    hr {
+        
+        background-image: linear-gradient(to right, $dark, $light, $light, $dark);
+        height: 1px;
+        margin: 0 auto 10px auto;
+    }
+
+    @media screen and (max-width: $max_Width) {
+        width: 100%;
+    }
+}
+
+.code {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    background-color: $light;
+    color: $dark;
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: left;
+
+    & .tag {
+        color: #7d247c;
+    }
+
+    & .norm {
+        color: #934f20;
+    }
+
+    & .param {
+        color: #1123a0;
+    }
+}
