@@ -3,24 +3,43 @@
 .footer {
     width: 100%;
     background-color: $dark;
-    padding: 20px;
     color: $light;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
+    @media screen and (max-width: $max_Width_Page) {
+        padding: 0;
+    }
+
     & .foot_int {
         width: 30%;
+
+        @media screen and (max-width: $max_Width_Page) {
+            width: 90%;
+        }
     }
 
     & p {
         font-family: 'quicksand_reg';
-        font-size: 20px;
+        font-size: 16px;
+        // text-decoration: underline;
         
         & a {
             color: $light;
             font-family: 'quicksand_bold';
+            padding: 20px;
+
+            &:hover {
+                color: $medium;
+            }
         }
+    }
+
+    hr {        
+        background-image: linear-gradient(to right, $dark, $light, $light, $dark);
+        height: 1px;
+        margin: 0 auto 10px auto;
     }
 }

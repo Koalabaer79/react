@@ -28,7 +28,7 @@ h1 {
     width: calc(100% - 20px);
     margin: 20px auto;
 
-    @media screen and (max-width: $max_Width) {
+    @media screen and (max-width: $max_Width_Page) {
         font-size: 30px;
         width: 90%;
     }
@@ -42,7 +42,7 @@ h2 {
     padding: 20px 10px;
     margin: 0 auto;
 
-    @media screen and (max-width: $max_Width) {
+    @media screen and (max-width: $max_Width_Page) {
         width: 90%;
     }
 }
@@ -77,7 +77,7 @@ p {
     text-align: center;
     color: lighten($color: $dark, $amount: 30);
 
-    @media screen and (max-width: $max_Width) {
+    @media screen and (max-width: $max_Width_Page) {
         width: 90%;
     }
 }
@@ -89,6 +89,8 @@ ul {
 
 .ul_green, .ul_red {
     margin-bottom: 20px;
+    text-align: center;
+    
     & li {
         margin-bottom: 10px;
         font-family: 'quicksand_reg';
@@ -115,8 +117,8 @@ ul {
 
 .darkCont {
     width: 100%;
-    color: $light;
-    background-color: $dark;
+    color: $dark;
+    background-color: $medium;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
@@ -127,19 +129,18 @@ ul {
     width: 50%;
 
     & p {
-        color: $light;
+        color: $dark;
         margin: 0 auto;
         padding: 10px 0;
     }
 
-    hr {
-        
-        background-image: linear-gradient(to right, $dark, $light, $light, $dark);
+    hr {        
+        background-image: linear-gradient(to right, $medium, $dark, $dark, $medium);
         height: 1px;
         margin: 0 auto 10px auto;
     }
 
-    @media screen and (max-width: $max_Width) {
+    @media screen and (max-width: $max_Width_Page) {
         width: 100%;
     }
 }
