@@ -31,5 +31,6 @@ jobs:
         user: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_pass }}
         remoteDir: "react.u-php.de"
+      run: node build
       env:
         CI: true
