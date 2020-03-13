@@ -1,7 +1,6 @@
-import React from 'react'
-import '../../scss/Navi.scss'
-// import logo from "./media/logo.png"
-import data from './navElements'
+import React from 'react';
+import '../scss/Navi.scss';
+import data from './navElements';
         
 
 
