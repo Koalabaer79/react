@@ -22,7 +22,7 @@ jobs:
     
     - name: Build
       run: npm run build
-    - name: Upload ./dist
+    - name: Upload ./build
       uses: sebastianpopp/ftp-action@releases/v1
       with:
         name: 'Build'
