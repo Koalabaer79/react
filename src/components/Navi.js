@@ -1,5 +1,4 @@
 import React from 'react';
-import '../scss/Navi.scss';
 import data from './navElements';
         
 
