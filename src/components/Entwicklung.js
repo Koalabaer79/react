@@ -2,6 +2,7 @@ import React from 'react'
 import Navi from './Navi'
 import mainPic from './images/entwicklung.jpg';
 import elements from './metaElements';
+import {Helmet} from 'react-helmet';
 
 class Entwicklung extends React.Component {
     constructor(props) {
@@ -12,6 +13,10 @@ class Entwicklung extends React.Component {
     render() {
       return (
         <div>
+          <Helmet>
+            <title>{elements.entwicklung.title}</title>
+            <meta name="description" content={elements.entwicklung.description} />
+          </Helmet>
           <Navi item="Entwicklung"></Navi>
           <div className="imgCont"><img className="mainPic" src={mainPic} alt="React - running man" /></div>
           <h1>{elements.entwicklung.title}</h1>

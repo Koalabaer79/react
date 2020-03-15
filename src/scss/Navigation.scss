@@ -47,7 +47,7 @@ a { text-decoration: none; }
     height: 70px;
     background-color: $dark;
     margin: 0 auto;
-    display: relative;
+    display: block;
     padding: 5px;
 
     @media screen and (max-width: $max_Width) {

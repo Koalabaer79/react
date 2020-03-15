@@ -123,6 +123,8 @@ ul {
     display: -webkit-flex;
     flex-wrap: wrap;
     margin: 20px auto;
+    border-top: 1px solid $dark;
+    border-bottom: 1px solid $dark;
 }
 
 .darkIns {

@@ -18,9 +18,8 @@
   },
   "scripts": {
     "start": "react-ssr-scripts start",
-    "build": "react-ssr-scripts build",
+    "build": "react-ssr-scripts build && node build",
     "test": "react-ssr-scripts test",
-    "deploy": "react-scripts build",
     "eject": "react-ssr-scripts eject"
   },
   "eslintConfig": {

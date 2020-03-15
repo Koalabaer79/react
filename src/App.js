@@ -3,9 +3,7 @@ import './scss/App.scss';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import data from "./routes";
 import Index from "./components/React";
-import { createMemoryHistory } from 'history/createBrowserHistory';
-
-const historyVar = createMemoryHistory();
+import history from './history';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +13,7 @@ class App extends React.Component {
 
   render() {
     return (
-        <Router history={historyVar}>
+        <Router history={history}>
             <Switch>
                 {data.map((elem, idx) => {
                     return <Route key={idx} path={elem.path} component={elem.component} />
