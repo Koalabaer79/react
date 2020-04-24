@@ -19,7 +19,7 @@ class ReactInfo extends React.Component {
             <meta name="description" content={elements.react.description} />
           </Helmet>
           <Navi item="React" />
-          <div className="imgCont"><img className="mainPic" src={mainPic} alt="React - running man" /></div>
+          <div className="imgCont"><img className="mainPic" src={mainPic} alt="React - Arbeitsplatz für React Programmierung" /></div>
           <h1>{elements.react.title}</h1>
           <p>{elements.react.description}</p>
           <h2>React Website mit SEO</h2>

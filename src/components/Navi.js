@@ -1,26 +1,15 @@
 import React from 'react';
 import data from './navElements';
-        
-
 
 export default class Navi extends React.Component {
     constructor(props){
         super(props);
-        this.state = {}
-    }
-
-        
-    toggleClass() {
-        var x = document.getElementById("wrapper");
-        if (x.className === "wrapper") {
-            x.className += " responsive";
-        } else {
-            x.className = "wrapper";
-        }
+        this.state = {  }
     }
 
     componentDidMount() {
         window.addEventListener("resize", this.update);
+        document.getElementById('btn').addEventListener("click", this.toggleClass);
     }
     
     update() {
@@ -30,11 +19,21 @@ export default class Navi extends React.Component {
             x.className = "wrapper";
         } 
     };
+    
+    toggleClass() {
+        var x = document.getElementById("wrapper");
+        this.setState({ queryPrint: true })
+        if (x.className === "wrapper") {
+            x.className += " responsive";
+        } else {
+            x.className = "wrapper";
+        }
+    }
 
     render() {
         return (
             <div id="nav">
-                <svg onClick={this.toggleClass} id="btn" data-name="btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.768 36.764"><defs></defs><title>nav_btn</title><rect className="cls-1" width="41.768" height="5.6167"/><rect className="cls-1" y="10.3824" width="41.768" height="5.6167"/><rect className="cls-1" y="20.7648" width="41.768" height="5.6167"/><rect className="cls-1" y="31.1473" width="41.768" height="5.6167"/></svg>
+                <svg id="btn" data-name="btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.768 36.764"><defs></defs><title>nav_btn</title><rect className="cls-1" width="41.768" height="5.6167"/><rect className="cls-1" y="10.3824" width="41.768" height="5.6167"/><rect className="cls-1" y="20.7648" width="41.768" height="5.6167"/><rect className="cls-1" y="31.1473" width="41.768" height="5.6167"/></svg>
             
                 <ul id="wrapper" className="wrapper">
                     {data.map((elem,idx) => {
