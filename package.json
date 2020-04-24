@@ -17,11 +17,10 @@
     "react-ssr-scripts": "2.2.3"
   },
   "scripts": {
-    "start": "react-ssr-scripts start",
     "build": "react-ssr-scripts build",
     "test": "react-ssr-scripts test",
     "eject": "react-ssr-scripts eject",
-    "view": "react-ssr-scripts build && node build"
+    "start": "react-ssr-scripts build && node build"
   },
   "eslintConfig": {
     "extends": "react-app"
