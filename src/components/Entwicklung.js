@@ -23,6 +23,7 @@ class Entwicklung extends React.Component {
           <p>{elements.entwicklung.description}</p>
           <h2>Entwicklung einer React-Website</h2>
           <p>Die Entwicklung einer SEO gerechten Webseite in React ist umfangreich und erfordert Wissen über Javascript. Der Anteil an HTML ist nur peripher, natürlich wird keine Webseite ohne HTML Struktur gibt es keine Webseite, jedoch umfasst die Programmierung mehr Kenntnisse in Javascript als in HTML.<br />Der Aufbau der Programierten Webseite gliedert sich in einem HTML Template, SCSS Stylesheets und die benötigten Komponenten, die entweder ganze Content-Seiten oder einzelne Elemente der Seite beinhalten können.</p>
+          <h2>Static Router</h2>
         </div>
       );
     }
